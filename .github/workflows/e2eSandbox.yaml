@@ -26,8 +26,6 @@ jobs:
       - uses: actions/checkout@v3
 
       # Triggers the test suite repository through CURL command
-      - name: Deploy to Github pages
-        run: deploy.sh ${{ 'https://pablozenledger.github.io/frontend-cicd' }}
       - name: Trigger Cypress Test Suite A
         run: |
           curl -X POST \
