@@ -1,0 +1,23 @@
+name: Receive Test Result
+
+on:
+  repository_dispatch:
+    types: [test_result]
+
+jobs: 
+  handle_results:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
+    - name: Handle test results
+      run: |
+        if[["${{github.event.client_payload.result}}" == "All specs passed!"]]; then
+          echo "Tests Passed!"
+          #Do something based on success
+        else
+          echo "Test Failed!"
+          #Do something based on failure
+        fi
