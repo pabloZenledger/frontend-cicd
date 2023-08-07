@@ -33,4 +33,12 @@ jobs:
           -H "Accept: application/vnd.github.v3+json" \
           https://api.github.com/repos/pabloZenledger/cypress_cicd/actions/workflows/testa.yml/dispatches \
           -d '{"ref":"main"}'
-
+      - name: Handle test result
+        run: |
+          if[["${{ github.event.client_payload.result}}" == "All specs passed!"]]; then
+            echo "Tests Passed!"
+            #Do something based on success??
+          else
+            echo "Tests Failed!"
+            #Do something based on success??
+          fi
