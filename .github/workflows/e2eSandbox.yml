@@ -39,8 +39,6 @@ jobs:
         run: |
           if[["${{ github.event.client_payload.result}}" == "All specs passed!"]]; then
             echo "Tests Passed!"
-            #Do something based on success??
           else
             echo "Tests Failed!"
-            #Do something based on success??
           fi
