@@ -9,7 +9,7 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "tuesday"
-      time: "13:30"
-      timezone: 'America/Creston"
+      time: "14:00"
+      timezone: 'America/Phoenix"
     labels:
       -"npm dependencies"
