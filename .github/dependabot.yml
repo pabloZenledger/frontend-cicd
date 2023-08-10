@@ -12,4 +12,4 @@ updates:
       time: "13:00" #UTC time that translates to 6am phoenix (MST, which is UTC-7)
     open-pull-requests-limit: 5
     labels:
-      -"security-update" #label to be given to each pr
+      - security-update #label to be given to each pr
