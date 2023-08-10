@@ -9,7 +9,7 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
-      time: "1:00pm" #UTC time that translates to 6am phoenix (MST, which is UTC-7)
+      time: "13:00" #UTC time that translates to 6am phoenix (MST, which is UTC-7)
     open-pull-request-limit: 5
     labels:
       -"security" #label to be given to each pr
